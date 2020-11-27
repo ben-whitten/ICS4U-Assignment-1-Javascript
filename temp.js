@@ -27,8 +27,9 @@ for (position = 0; position < chosenString.length; position) {
     var characterDigit = parseInt(chosenString[position]) + "<br>";
     if (characterDigit >= '0' && characterDigit <= '9') {
         while (true) {
-            if (chosenString[position + 1] === 'undefined') {
+            if (typeof chosenString[position + 1] === undefined) {
                 finalString = finalString + chosenString[position];
+                break;
             } else {
                 finalString = finalString + chosenString[position + 1];
                 timeThrough = timeThrough + 1;
